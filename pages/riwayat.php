@@ -1,5 +1,5 @@
 <?php
-
+if(empty($_SESSION)) header('location:index.php');
 $id_user = $_SESSION['id_user'];
 $queryRiwayat = mysqli_query($koneksi, "SELECT * FROM `history_lelang` 
                                         JOIN `tb_barang` ON history_lelang.id_barang = tb_barang.id_barang 

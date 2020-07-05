@@ -4,11 +4,21 @@ include './db/config.php';
 include './admin/template/header.php';
 
 session_start();
+if (!empty($_GET['pesan'])){
+    if ($_GET['pesan'] == "gagal") {
+        echo "<script> alert('data ada yang kosong tuh!'); </script>";
+    }
+}
+    
 
 if (!empty($_SESSION['username'])) {
     header("location:index.php");
 }
 ?>
+
+<head>
+    <link rel="stylesheet" href="./admin/template/assets/css/style.css">
+</head>
 
 <section class="section">
     <div class="container mt-5">

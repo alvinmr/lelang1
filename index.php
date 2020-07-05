@@ -23,44 +23,55 @@ if (!empty($_GET['pesan'])) {
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     </head>
 
     <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Aplikasi Pelelangan</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link <?= $_GET['page'] == '' ? 'active' : '' ?>" href="./">Beranda</a>
-                        <?php if (empty($_SESSION['username'])) { ?>
-                        <a href="login.php" class="btn btn-primary mx-4">Masuk</a>
-                        <a href="register.php" class="btn btn-secondary">Daftar</a>
-                        <?php } else { ?>
-                        <a class="nav-item nav-link <?= $_GET['page'] == 'riwayat' ? 'active' : '' ?>"
-                            href="?page=riwayat">Riwayat</a>
-                        <a href="./modules/auth.php?aksi=logout" class="btn btn-primary">Logout</a>
-                        <?php } ?>
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Aplikasi Pelelangan</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ml-auto">
+                                <a class="nav-item nav-link <?= $_GET['page'] == '' ? 'active' : '' ?>"
+                                    href="./">Beranda</a>
+                                <?php if (empty($_SESSION['username'])) { ?>
+                                <a href="login.php" class="btn btn-primary mx-4">Masuk</a>
+                                <a href="register.php" class="btn btn-secondary">Daftar</a>
+                                <?php } else { ?>
+                                <a class="nav-item nav-link <?= $_GET['page'] == 'riwayat' ? 'active' : '' ?>"
+                                    href="?page=riwayat">Riwayat</a>
+                                <a href="./modules/auth.php?aksi=logout" class="btn btn-primary">Logout</a>
+                                <?php } ?>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </nav>
             </div>
-        </nav>
-        <!-- End Navbar -->
+        </div>
 
-        <!-- Content -->
-        <?php if (empty($_GET['page'])) {
-        include './pages/index.php';
-    } else {
-        include './pages/' . $_GET['page'] . '.php';
-    }  ?>
-        <!-- End Content -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Content -->
+                <?php if (empty($_GET['page'])) {
+                include './pages/index.php';
+                } else {
+                include './pages/' . $_GET['page'] . '.php';
+                }  ?>
+                <!-- End Content -->
+
+
+            </div>
+        </section>
+
 
 
         <!-- Footer -->

@@ -21,6 +21,11 @@ if (!empty($_SESSION['username'])) {
 }
 ?>
 
+
+<head>
+    <link rel="stylesheet" href="./admin/template/assets/css/style.css">
+</head>
+
 <section class="section">
     <div class="container mt-5">
         <div class="row">
