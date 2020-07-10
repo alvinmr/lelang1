@@ -22,8 +22,8 @@ if (!empty($_GET['pesan'])) {
 
         <!-- Vendor CSS -->
         <!-- CSS Vendor -->
-        <link rel="stylesheet" href="./template/vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./template/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./admin/template/vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./admin/template/vendor/font-awesome-4.7.0/css/all.min.css">
     </head>
 
     <body>
