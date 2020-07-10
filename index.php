@@ -20,10 +20,10 @@ if (!empty($_GET['pesan'])) {
 
         <title>Aplikasi Pelelangan</title>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <!-- Vendor CSS -->
+        <!-- CSS Vendor -->
+        <link rel="stylesheet" href="./template/vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./template/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
